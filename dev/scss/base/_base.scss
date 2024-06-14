@@ -21,10 +21,9 @@ body {
 	width: 100%;
 	min-width: 320px;
 	margin: 0; // Remove the margin in all browsers.
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	color: $black;
 	font-size: 18px;
-	background-color: red;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -69,7 +68,7 @@ h5,
 h6 {
 	margin: 0;
 	font-weight: normal;
-	font-family: 'Roboto', sans-serif;
+	// font-family: 'Roboto', sans-serif;
 	line-height: 1.08em;
 }
 
