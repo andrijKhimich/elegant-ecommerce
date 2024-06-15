@@ -1,0 +1,11 @@
+
+.breadcrumb {
+  color: $gray-400;
+  font-size: 14px;
+  line-height: 1.71em;
+  font-weight: 500;
+  &_last {
+    color: $gray-700;
+    margin-left: 16px;
+  }
+}
