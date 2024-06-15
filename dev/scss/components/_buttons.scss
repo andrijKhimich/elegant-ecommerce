@@ -1,10 +1,31 @@
+.btn {
+	display: inline-block;
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+	line-height: 1.75em;
+	font-weight: 500;
+	letter-spacing: -0.004em;
+	border: 1px solid $gray-700;
+	background-color: $gray-700;
+	color: $white;
+	padding: 4px 39px;
+	border-radius: 8px;
+	transition: color $hover-duration $timing, background-color $hover-duration $timing;
+	&:hover {
+		background-color: transparent;
+		color: $gray-700;
+	}
+	&_round {
+		border-radius: 40px;
+	}
+}
 .btn-more {
 	position: relative;
 	display: flex;
 	align-items: center;
 	font-size: 16px;
 	letter-spacing: 0.02em;
-	color:$black;
+	color: $black;
 	padding: 0;
 
 	&.active {
@@ -19,7 +40,7 @@
 .plus {
 	width: 24px;
 	height: 24px;
-	background-color:$black;
+	background-color: $black;
 	border-radius: 50%;
 	position: relative;
 	display: inline-block;
