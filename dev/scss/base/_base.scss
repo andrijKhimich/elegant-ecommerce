@@ -68,28 +68,51 @@ h5,
 h6 {
 	margin: 0;
 	font-weight: normal;
-	// font-family: 'Roboto', sans-serif;
-	line-height: 1.08em;
+	font-family: 'Poppins', sans-serif;
 }
-
-h1,
-h2 {
-	font-size: 56px;
-	line-height: 1.08em;
-
-	span {
-		color:$black;
+h1 {
+	font-size: 60px;
+	line-height: 1.05em;
+	@include minw($tablet) {
+		font-size: 80px;
 	}
 }
-
+h2 {
+	font-size: 54px;
+	line-height: 1.055em;
+	@include minw($tablet) {
+		font-size: 72px;
+	}
+}
 h3 {
-	font-size: 36px;
-	margin-bottom: 23px;
+	font-size: 46px;
+	line-height: 1.07;
+	@include minw($tablet) {
+		font-size: 54px;
+	}
 }
 
 h4 {
 	font-size: 34px;
-	margin-bottom: 8px;
+	line-height: 1.1em;
+	@include minw($tablet) {
+		font-size: 40px;
+	}
+}
+
+h5 {
+	font-size: 28px;
+	line-height:  1.11em;
+	@include minw($tablet) {
+		font-size: 34px;
+	}
+}
+h6 {
+	font-size: 20px;
+	line-height: 1.21em;
+	@include minw($tablet) {
+		font-size: 28px;
+	}
 }
 
 hr {
@@ -108,7 +131,7 @@ a {
 	text-decoration: none;
 	color: inherit;
 	font-size: inherit;
-	line-height: 1.6em;
+	line-height: 1.625em;
 	margin: 0;
 	background-color: transparent; //Remove the gray background on active links in IE 10.
 
@@ -296,6 +319,8 @@ p,
 li {
 	margin: 0;
 	color: inherit;
+	font-size: 16px;
+	line-height: 1.625em;
 }
 
 ul,
