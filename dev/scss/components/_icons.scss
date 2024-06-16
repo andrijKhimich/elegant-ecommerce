@@ -1,0 +1,18 @@
+.icon {
+  fill: $gray-700;
+  transition:
+    transform $hover-duration linear,
+    fill $hover-duration $timing,
+    stroke $hover-duration $timing;
+  &-arrow {
+    stroke: $blue;
+    width: 18px;
+    height: 18px;
+    transform: translate(0);
+  }
+  &-close {
+    width: 100%;
+    height: 100%;
+    stroke: $gray-500;
+  }
+}

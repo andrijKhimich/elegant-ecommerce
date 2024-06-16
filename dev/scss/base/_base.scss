@@ -4,6 +4,9 @@
 *::after {
 	box-sizing: border-box;
 }
+#wpadminbar {
+	display: none !important;
+}
 
 html {
 	// font-size: 100%;
@@ -102,7 +105,7 @@ h4 {
 
 h5 {
 	font-size: 28px;
-	line-height:  1.11em;
+	line-height: 1.11em;
 	@include minw($tablet) {
 		font-size: 34px;
 	}

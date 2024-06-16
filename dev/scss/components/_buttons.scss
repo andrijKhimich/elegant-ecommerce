@@ -10,7 +10,9 @@
 	color: $white;
 	padding: 4px 39px;
 	border-radius: 8px;
-	transition: color $hover-duration $timing, background-color $hover-duration $timing;
+	transition:
+		color $hover-duration $timing,
+		background-color $hover-duration $timing;
 	&:hover {
 		background-color: transparent;
 		color: $gray-700;
@@ -33,6 +35,49 @@
 			&::after {
 				transform: translate(-50%, -50%) rotate(95deg);
 			}
+		}
+	}
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	position: relative;
+	font-weight: 500;
+	font-family: 'Inter', sans-serif;
+	white-space: nowrap;
+	&::before {
+		content: '';
+		height: 1px;
+		width: 100%;
+		background-color: currentColor;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translate(0, 0);
+		transition: transform $hover-duration linear;
+	}
+	&:hover {
+		&::before {
+			transform: translate(0, -2px);
+		}
+		.icon-arrow {
+			transform: translate(2px, 0);
+		}
+	}
+	&_sm {
+		font-size: 14px;
+		line-height: 1.714em;
+	}
+	&_blue {
+		color: $blue;
+	}
+	&__header {
+		display: none;
+		@include minw($mob) {
+			display: inline-flex;
 		}
 	}
 }
@@ -65,5 +110,22 @@
 		width: 1px;
 		height: 10px;
 		transition: transform $hover-duration $timing;
+	}
+}
+
+.close {
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	&__header {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translate(0, -50%);
+		&:hover {
+			.icon-close {
+				stroke: $black;
+			}
+		}
 	}
 }

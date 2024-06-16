@@ -1,7 +1,9 @@
 // import $ from 'jquery';
 
-// import { toggleTab } from './modules/tabs.js';
-// toggleTab();
+import { closeHeaderCta } from './modules/closeHeaderCta.js';
+addEventListener("DOMContentLoaded", () => closeHeaderCta());
+
+
 
 // import { toggleMenu } from './modules/toggleMenu.js';
 // toggleMenu();
