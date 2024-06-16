@@ -43,6 +43,25 @@
 			}
 		}
 	}
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__main {
+		padding: 0 16px;
+		position: relative;
+	}
+	&-control {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		&__icon {
+			&:not(:last-child) {
+				margin-right: 16px;
+			}
+		}
+	}
 }
 
 .logo {

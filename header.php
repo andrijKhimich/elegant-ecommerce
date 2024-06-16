@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Main Header file for the Elegant theme.
  *
@@ -64,6 +65,69 @@
 						</button>
 					</div>
 				<?php endif ?>
+				<div class="header__main js-header">
+					<div class="container">
+						<div class="header__row">
+							<?php
+							if ( function_exists( 'the_custom_logo' ) ) :
+								the_custom_logo();
+							endif;
+							?>
+							<nav class="nav js-header-nav">
+								<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'Header menu',
+										'container'      => null,
+										'menu_class'     => 'nav-list',
+									)
+								)
+								?>
+							</nav>
+							<?php
+							$header_controls = get_field( 'header_icons', 'options' );
+							if ( $header_controls ) :
+								?>
+								<div class="header-control">
+									<a href="#" class="header-control__icon header-search">
+										<?php
+										$search_icon = $header_controls['search_icon'];
+										if ( ! empty( $search_icon ) ) :
+											?>
+											<img src="<?php echo esc_url( $search_icon['url'] ); ?>" alt="<?php echo esc_attr( $search_icon['alt'] ); ?>" />
+											<?php
+										endif;
+										?>
+									</a>
+									<a href="#" class="header-control__icon header-login">
+										<?php
+										$login_icon = $header_controls['login_icon'];
+										if ( ! empty( $login_icon ) ) :
+											?>
+											<img src="<?php echo esc_url( $login_icon['url'] ); ?>" alt="<?php echo esc_attr( $login_icon['alt'] ); ?>" />
+											<?php
+										endif;
+										?>
+									</a>
+									<a href="#" class="header-control__icon header-cart">
+										<?php
+										$cart_icon = $header_controls['cart_icon'];
+										if ( ! empty( $cart_icon ) ) :
+											?>
+											<img src="<?php echo esc_url( $cart_icon['url'] ); ?>" alt="<?php echo esc_attr( $cart_icon['alt'] ); ?>" />
+											<?php
+										endif;
+										?>
+									</a>
+								</div>
+								<?php
+							endif;
+							?>
+						</div>
+
+					</div>
+
+				</div>
 			</header>
 
 			<main class='main-wrapper js-wrapper'>

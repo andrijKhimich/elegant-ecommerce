@@ -53,6 +53,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'menus' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'custom-logo' );
 }
 
 /**
@@ -86,3 +87,15 @@ add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
 
 // Disable automatic paragraph tags in Contact Form 7.
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
+
+/**
+ * Changes the class on the custom logo in the header.php
+ *
+ * @param string $html the class.
+ * @return string
+ */
+function change_logo_class( $html ) {
+	$html = str_replace( 'custom-logo-link', 'logo', $html );
+	return $html;
+}
+add_filter( 'get_custom_logo', 'change_logo_class', 10 );
